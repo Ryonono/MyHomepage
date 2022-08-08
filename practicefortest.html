@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <!-- 文章に関する情報を指定する時に使用する→この文書の文字はUTF-8というデジタルデータ形式を使用するという意味 -->
+  <!-- ここが正しく記載されていないと、文字化けになる可能性がある -->
+  <meta charset="UTF-8">
+  <!-- ここでのcontent内容が、Googleの検索結果に出力されることになるから気をつけること -->
+  <meta name="description" content="Ryoの自己紹介サイトになっています。">
+  <title>My Profile -Ryo-</title>
+  <!-- drawerの導入 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+  <!-- Swiperの導入 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+  <!-- <style></style>このように直接CSSを記述することもできる -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 必ず、Jqueryを読み込んでからbootstrapを読み込む（今回フォルダの中に入れているが、オンラインで呼び出す方法もある） -->
+  <script type="text/javascript" src="./js/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.js"></script>
+  <!-- レスポンシブの準備 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="drawer drawer--top">
+
+  <header role="banner">
+    <div class="image1"></div>
+    <!-- srcの場合は、相対パスもしくは絶対パスで画像を引用する
+          →相対パスの場合、このファイルが存在しているところを基点として、./は同一階層、../は一つ上の階層を示す -->
+    <img src="./images/HTML5 Logo.jpeg" style="width: 50px; background-color: silver;" alt="HTML5ロゴ">
+    </div>
+
+    <h3 class="homepage-name">My Homepage</h3>
+
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <!-- ここでアイコンを表示している -->
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+      <ul class="drawer-menu">
+        <li><a class="drawer-brand" href="./practicefortest.html">Ryo's homepage</a></li>
+        <li><a class="drawer-menu-item" href="./history.html">Explore My History</a></li>
+        <li><a class="drawer-menu-item" href="./hobby.html">My Hobby</a></li>
+        <li><a class="drawer-menu-item" href="./learning.html">My learning</a></li>
+        <li><a class="drawer-menu-item" href=#>Notes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <aside class="col-md-4">
+
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide1</div>
+              <div class="swiper-slide">Slide2</div>
+              <div class="swiper-slide">Slide3</div>
+              <div class="swiper-slide">Slide4</div>
+              <div class="swiper-slide">Slide5</div>
+            </div>
+
+            <div class="swiper-button-prev swiper-button-black"></div>
+            <div class="swiper-button-next swiper-button-black"></div>
+
+            <div class="swiper-pagination swiper-pagination-white"></div>
+
+          </div>
+
+          <h3>✔︎Skill</h3>
+
+          <h4>Language</h4>
+          <ul>
+            <li>Japanese</li>
+            <li>English(TOEIC 855)</li>
+            <li>German(B1)</li>
+          </ul>
+
+
+          <h4>Programming Language</h4>
+          <ul>
+            <li>HTML5, CSS3(Bootstrap)</li>
+            <li>Ruby(ruby on rails: Framework)</li>
+            <li>Java(Fundamental)</li>
+            <li>Python(Fundamental)</li>
+            <li>Angular(Framework)</li>
+          </ul>
+
+
+
+
+          <!-- <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Language</th>
+                    <th>Programming Language</th>
+                    <th>??</th>
+                    <th>Others</th>
+                  </tr>
+                </thead>
+                <tdoby>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tdoby>
+              </table> -->
+
+        </aside>
+
+        <div class="col-md-1"></div>
+
+        <article class="col-md-7">
+          <h1>Hello Everyone! I'm Ryo!</h1>
+          <div class="box">
+            <div>
+              <h3>Explanation of this Site</h3>
+              <p>I made this WEB site to learn how to create good designed site only using HTML, CSS and JS.</p>
+              <p>In this site, I can not only introduce myself but also show my skill of building WEB site!</p>
+              <p>”Kill two birds with one stone.” is important proverb for me.</p>
+            </div>
+
+            <br>
+            <div>
+              <h2>Overview</h2>
+              <h3>Who am I?</h3>
+              <p>I am 23 year's old IT developer working at home in Tokyo, Japan.</p>
+              <p>When I was a university student, I majored in German culture and language,</p>
+              <p>so I am super fresher at IT field.</p>
+            </div>
+
+            <br>
+            <div>
+              <img src="images/My portrait in India.jpeg" class="img1" style="width: 550px; height: 700px;"
+                alt="My portrait in India">
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+
+
+      <div class="col-md-8">
+        <table>
+          <tbody>
+            <tr>
+              <td>Title</td>
+            </tr>
+            <tr>
+              <td>Explanation</td>
+            </tr>
+            <tr>
+              <td>Number of items・Time</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+
+
+
+
+
+      <!-- </div> -->
+
+      <div class="btn btn-primary">Hit</div>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="./next.html">Next Page</a>
+  </footer>
+
+  <!-- jquery & iScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.drawer').drawer();
+    });
+
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 2500,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+    });
+  </script>
+
+</body>
+
+
+</html>

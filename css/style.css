@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+header .image1 {
+  float: left;
+}
+header .homepage-name {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.drawer-hamburger-icon,
+.drawer-hamburger-icon:before,
+.drawer-hamburger-icon:after {
+  background-color: orange;
+  height: 4px;
+}
+
+.drawer-open {
+  background-color: gray;
+}
+
+.drawer-menu-item:hover {
+  color: blue;
+}
+
+/* ハンバーガーメニューが開いた状態のcss */
+.drawer-open .drawer-hamburger-icon:before,
+.drawer-open .drawer-hamburger-icon:after {
+  background-color: orange;
+}
+
+.drawer--top.drawer-open .drawer-hamburger {
+  right: 0;
+}
+
+/* ハンバーガーメニューが開いている時の、それ以外の要素の条件 */
+.drawer-overlay {
+  background-color: transparent;
+}
+
+
+
+.container {
+  margin: 0;
+}
+
+.swiper-container {
+  width: 350px;
+  height: 250px;
+  background-color: gray;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <!-- 文章に関する情報を指定する時に使用する→この文書の文字はUTF-8というデジタルデータ形式を使用するという意味 -->
+  <!-- ここが正しく記載されていないと、文字化けになる可能性がある -->
+  <meta charset="UTF-8">
+  <!-- ここでのcontent内容が、Googleの検索結果に出力されることになるから気をつけること -->
+  <meta name="description" content="Ryoの自己紹介サイトになっています。">
+  <title>My Profile -Ryo-</title>
+  <!-- <style></style>このように直接CSSを記述することもできる -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 必ず、Jqueryを読み込んでからbootstrapを読み込む（今回フォルダの中に入れているが、オンラインで呼び出す方法もある） -->
+  <script type="text/javascript" src="./js/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.js"></script>
+  <!-- レスポンシブの準備 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1 image1">
+          <!-- srcの場合は、相対パスもしくは絶対パスで画像を引用する
+          →相対パスの場合、このファイルが存在しているところを基点として、./は同一階層、../は一つ上の階層を示す -->
+          <img src="./images/HTML5 Logo.jpeg" style="width: 50px; background-color: silver;" alt="HTML5ロゴ">
+        </div>
+        <a class="col-md-3" href="./history.html">Explore My History</a>
+        <a class="col-md-3" href="./hobby.html">My Hobby</a>
+        <a class="col-md-3" href="./learning.html">My learning</a>
+        <a class="col-md-2">Notes</a>
+      </div>
+    </div>
+
+
+  </header>
+
+
+  <main>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-10">
+
+          <h3>My History</h3>
+
+          <br>
+          <h5>under 12</h5>
+
+          <p>I was born in Kyoto ciry, Japan in 1998. </p>
+          <p>Since my mother is a music teacher, I went to Musicals and Operas so many times.</p>
+          <p>That's why I love to sing and listen to music even now.</p>
+          <p>When I was elementary student, there was a test of science. In that test, everyone except me could not get
+            100% score and I was praised by my teacher.</p>
+          <p>That was very happy event, so after that, I started studying hard in order to get as high score as I can.
+          </p>
+          <p>There's another thing to notice. There was a Ekiden competition of all elementary schools in Kyoto-city.
+          </p>
+          <p>I was one of the team which represent my school. The result was not good. We couldn't go to the final.</p>
+          <p>That also made me decide to belong to track&field club in junior high school.</p>
+
+        </div>
+
+        <div class="col-md-10">
+
+          <br>
+          <h5>junior high school and high school</h5>
+
+          <p>Thanks to the effort and luck I had, I could enter famous junior high school in Kyoto.</p>
+          <p>The school system was six-year high school education system, so I spent 6 years in that school.</p>
+          <p></p>
+
+
+        </div>
+
+
+
+  </main>
+
+
+
+</body>
+
+</html>

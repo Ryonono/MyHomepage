@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <!-- 文章に関する情報を指定する時に使用する→この文書の文字はUTF-8というデジタルデータ形式を使用するという意味 -->
+  <!-- ここが正しく記載されていないと、文字化けになる可能性がある -->
+  <meta charset="UTF-8">
+  <!-- ここでのcontent内容が、Googleの検索結果に出力されることになるから気をつけること -->
+  <meta name="description" content="Ryoの自己紹介サイトになっています。">
+  <title>My Profile -Ryo-</title>
+  <!-- <style></style>このように直接CSSを記述することもできる -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 必ず、Jqueryを読み込んでからbootstrapを読み込む（今回フォルダの中に入れているが、オンラインで呼び出す方法もある） -->
+  <script type="text/javascript" src="./js/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.js"></script>
+  <!-- レスポンシブの準備 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1 image1">
+          <!-- srcの場合は、相対パスもしくは絶対パスで画像を引用する
+          →相対パスの場合、このファイルが存在しているところを基点として、./は同一階層、../は一つ上の階層を示す -->
+          <img src="./images/HTML5 Logo.jpeg" style="width: 50px; background-color: silver;" alt="HTML5ロゴ">
+        </div>
+        <a class="col-md-3" href="./history.html">Explore My History</a>
+        <a class="col-md-3" href="./hobby.html">My Hobby</a>
+        <a class="col-md-3" href="./learning.html">My learning</a>
+        <a class="col-md-2">Notes</a>
+      </div>
+    </div>
+  </header>
+
+
+  
+
+
+  </body>
+
+
+
+</html>
