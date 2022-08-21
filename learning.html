@@ -49,7 +49,6 @@
 
   <main>
 
-    <div class="space"></div>
     <div class="img-practice"><img src=#></div>
 
 
@@ -57,11 +56,23 @@
     <!-- scrollmeはJqueryのプラグインで、ダウンロードしたら使用できる
     data-from, data-toは動きがスタートする位置と終わる位置を指定する（0-1)
     例えばfrom0だと、要素が見えた瞬間に動き出す -->
+    <!-- translateはx,y,z軸に何pxだけ動くかを示したもの,rotateは回転を何度入れるのかということを示す -->
+    <!-- data-rotatez="90" -->
     <div class="scrollme">
-      <div class="animateme" data-when="enter" data-from="0.2" data-to="0.8" data-opacity="0.3" data-translatex="-200"
+      <div class="animateme" data-when="enter" data-from="0.3" data-to="0.8" data-opacity="0.5" data-translatex="600"
         data-rotatez="90">
         Yup, that's all.
       </div>
+    </div>
+
+    <div class="scrollme">
+      <img class="animateme" data-when="enter" data-from="0.5" data-to="0.9" data-opacity="1" data-translatex="600"
+        src="images/My portrait in India.jpeg">
+    </div>
+
+    <div class="scrollme">
+      <img class="animateme" data-when="enter" data-from="0.2" data-to="0.8" data-opacity="0.7" data-translatex="700"
+        data-translatey="-200">
     </div>
 
 
