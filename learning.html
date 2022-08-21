@@ -47,6 +47,31 @@
     </nav>
   </header>
 
+  <main>
+
+    <div class="space"></div>
+    <div class="img-practice"><img src=#></div>
+
+
+
+    <!-- scrollmeはJqueryのプラグインで、ダウンロードしたら使用できる
+    data-from, data-toは動きがスタートする位置と終わる位置を指定する（0-1)
+    例えばfrom0だと、要素が見えた瞬間に動き出す -->
+    <div class="scrollme">
+      <div class="animateme" data-when="enter" data-from="0.2" data-to="0.8" data-opacity="0.3" data-translatex="-200"
+        data-rotatez="90">
+        Yup, that's all.
+      </div>
+    </div>
+
+
+
+
+  </main>
+
+
+
+
 
 
 
@@ -56,6 +81,8 @@
   <!-- drawer.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+  <!-- scrollme.js -->
+  <script src="js/scrollme-master/jquery.scrollme.js"></script>
   <script>
     $(document).ready(function () {
       $('.drawer').drawer();
