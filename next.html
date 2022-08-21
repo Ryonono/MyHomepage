@@ -6,7 +6,11 @@
   <!-- ここが正しく記載されていないと、文字化けになる可能性がある -->
   <meta charset="UTF-8">
   <title>My Profile -Ryo-</title>
+  <!-- drawerの導入 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+  <!-- <style></style>このように直接CSSを記述することもできる -->
   <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- 必ず、Jqueryを読み込んでからbootstrapを読み込む（今回フォルダの中に入れているが、オンラインで呼び出す方法もある） -->
   <script type="text/javascript" src="./js/jquery-3.6.0.js"></script>
   <script type="text/javascript" src="./js/bootstrap.js"></script>
@@ -14,10 +18,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
+<body class="drawer drawer--right">
+
+  <header role="banner">
+    <div class="image1"></div>
+    <!-- srcの場合は、相対パスもしくは絶対パスで画像を引用する
+        →相対パスの場合、このファイルが存在しているところを基点として、./は同一階層、../は一つ上の階層を示す -->
+    <img src="./images/HTML5 Logo.jpeg" style="width: 50px; background-color: silver;" alt="HTML5ロゴ">
+    </div>
+
+    <h3 class="homepage-name">My Homepage</h3>
+
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <!-- ここでアイコンを表示している -->
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+      <ul class="drawer-menu">
+        <li><a class="drawer-brand" href="./practicefortest.html">Ryo's homepage</a></li>
+        <li><a class="drawer-menu-item" href="./history.html">Explore My History</a></li>
+        <li><a class="drawer-menu-item" href="./hobby.html">My Hobby</a></li>
+        <li><a class="drawer-menu-item" href="./learning.html">My learning</a></li>
+        <li><a class="drawer-menu-item" href=#>Notes</a></li>
+      </ul>
+    </nav>
+  </header>
 
 
-<h2>This is next page</h2>
 
 
+  <h2>This is next page</h2>
+
+  <div><a href="./practicefortest.html">Go Back</a></div>
+
+
+  <!-- jquery & iScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.drawer').drawer();
+    });
+  </script>
+
+</body>
 
 </html>

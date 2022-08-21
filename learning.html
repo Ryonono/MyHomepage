@@ -8,6 +8,8 @@
   <!-- ここでのcontent内容が、Googleの検索結果に出力されることになるから気をつけること -->
   <meta name="description" content="Ryoの自己紹介サイトになっています。">
   <title>My Profile -Ryo-</title>
+  <!-- drawerの導入 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
   <!-- <style></style>このように直接CSSを記述することもできる -->
   <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
@@ -18,28 +20,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="drawer drawer--right">
 
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-1 image1">
-          <!-- srcの場合は、相対パスもしくは絶対パスで画像を引用する
+  <header role="banner">
+    <div class="image1"></div>
+    <!-- srcの場合は、相対パスもしくは絶対パスで画像を引用する
           →相対パスの場合、このファイルが存在しているところを基点として、./は同一階層、../は一つ上の階層を示す -->
-          <img src="./images/HTML5 Logo.jpeg" style="width: 50px; background-color: silver;" alt="HTML5ロゴ">
-        </div>
-        <a class="col-md-3" href="./history.html">Explore My History</a>
-        <a class="col-md-3" href="./hobby.html">My Hobby</a>
-        <a class="col-md-3" href="./learning.html">My learning</a>
-        <a class="col-md-2">Notes</a>
-      </div>
+    <img src="./images/HTML5 Logo.jpeg" style="width: 50px; background-color: silver;" alt="HTML5ロゴ">
     </div>
 
+    <h3 class="homepage-name">My Homepage</h3>
 
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <!-- ここでアイコンを表示している -->
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+      <ul class="drawer-menu">
+        <li><a class="drawer-brand" href="./practicefortest.html">Ryo's homepage</a></li>
+        <li><a class="drawer-menu-item" href="./history.html">Explore My History</a></li>
+        <li><a class="drawer-menu-item" href="./hobby.html">My Hobby</a></li>
+        <li><a class="drawer-menu-item" href="./learning.html">My learning</a></li>
+        <li><a class="drawer-menu-item" href=#>Notes</a></li>
+      </ul>
+    </nav>
   </header>
 
 
-  </body>
+
+
+  <!-- jquery & iScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.drawer').drawer();
+    });
+  </script>
+</body>
+
+
+<div><a href="./practicefortest.html">Go Back</a></div>
 
 
 

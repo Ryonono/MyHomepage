@@ -8,6 +8,8 @@
   <!-- ここでのcontent内容が、Googleの検索結果に出力されることになるから気をつけること -->
   <meta name="description" content="Ryoの自己紹介サイトになっています。">
   <title>My Profile -Ryo-</title>
+  <!-- drawerの導入 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
   <!-- <style></style>このように直接CSSを記述することもできる -->
   <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
@@ -19,25 +21,34 @@
 </head>
 
 
-<body>
+<body class="drawer drawer--right">
 
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-1 image1">
-          <!-- srcの場合は、相対パスもしくは絶対パスで画像を引用する
+  <header role="banner">
+    <div class="image1"></div>
+    <!-- srcの場合は、相対パスもしくは絶対パスで画像を引用する
           →相対パスの場合、このファイルが存在しているところを基点として、./は同一階層、../は一つ上の階層を示す -->
-          <img src="./images/HTML5 Logo.jpeg" style="width: 50px; background-color: silver;" alt="HTML5ロゴ">
-        </div>
-        <a class="col-md-3" href="./history.html">Explore My History</a>
-        <a class="col-md-3" href="./hobby.html">My Hobby</a>
-        <a class="col-md-3" href="./learning.html">My learning</a>
-        <a class="col-md-2">Notes</a>
-      </div>
+    <img src="./images/HTML5 Logo.jpeg" style="width: 50px; background-color: silver;" alt="HTML5ロゴ">
     </div>
 
+    <h3 class="homepage-name">My Homepage</h3>
 
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <!-- ここでアイコンを表示している -->
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+      <ul class="drawer-menu">
+        <li><a class="drawer-brand" href="./practicefortest.html">Ryo's homepage</a></li>
+        <li><a class="drawer-menu-item" href="./history.html">Explore My History</a></li>
+        <li><a class="drawer-menu-item" href="./hobby.html">My Hobby</a></li>
+        <li><a class="drawer-menu-item" href="./learning.html">My learning</a></li>
+        <li><a class="drawer-menu-item" href=#>Notes</a></li>
+      </ul>
+    </nav>
   </header>
+
+
 
 
   <main>
@@ -45,17 +56,17 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-md-10">
+        <div class="col-md-12 histories">
 
           <h3>My History</h3>
 
           <br>
           <h5>under 12</h5>
-
-          <p>I was born in Kyoto ciry, Japan in 1998. </p>
-          <p>Since my mother is a music teacher, I went to Musicals and Operas so many times.</p>
-          <p>That's why I love to sing and listen to music even now.</p>
-          <p>When I was elementary student, there was a test of science. In that test, everyone except me could not get
+          <p class="image-history"><img src="#"></p>
+          <p class="sentence">I was born in Kyoto ciry, Japan in 1998. </p>
+          <p class="sentence">Since my mother is a music teacher, I went to Musicals and Operas so many times.</p>
+          <p class="sentence">That's why I love to sing and listen to music even now.</p>
+          <p class="sentence">When I was elementary student, there was a test of science. In that test, everyone except me could not get
             100% score and I was praised by my teacher.</p>
           <p>That was very happy event, so after that, I started studying hard in order to get as high score as I can.
           </p>
@@ -66,24 +77,64 @@
 
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-12 histories">
 
-          <br>
           <h5>junior high school and high school</h5>
-
-          <p>Thanks to the effort and luck I had, I could enter famous junior high school in Kyoto.</p>
-          <p>The school system was six-year high school education system, so I spent 6 years in that school.</p>
-          <p></p>
-
+          <p class="image-history"><img src="#"></p>
+          <p class="sentence">Thanks to the effort and luck I had, I could enter famous junior high school in Kyoto.</p>
+          <p class="sentence">The school system was six-year high school education system, so I spent 6 years in that school.</p>
+          <p class="sentence">As I said before, I decided to belong to track&field club and I mainly ran 1500m or 800m.</p>
+          <p class="sentence">In the first year, I could not do English test well and i had to do the supplementary lesson with my
+            teacher.</p>
+          <p class="sentence">However after that, I got used to use English and I became to be able to get high score in English exam.
+          </p>
+          <p>In the third year, I went to Australia ( that was first time I went abroad) and I was so fascinated by the
+            magnificent and beautiful nature, interesting culture, and indegenous food.</p>
+          <p>After the experience, I really wanted to go anywhere I can and experience such a new world.</p>
+          <p>Therefore, I went to Fiji and Canada for a month to study English and feel other cultures.</p>
+          <p>That deepened my knowledge of English and other culture.</p>
 
         </div>
 
+        <div class="col-md-12 histories">
 
+          <h5>University era</h5>
+          <p class="image-history"><img src="#"></p>
+          <p class="sentence">While learning English, One thing came up with my mind, "I want to learn other language!"</p>
+          <p class="sentence">Then, I love to watch Opera and Musical, so I decided to learn German language as my major, in order to be
+            able to understand what they sing or say in Opera and Musical.</p>
+          <p class="sentence">Learning German was so hard to me, because at that time I am interested in a cappella club activity and I
+            worked a lot as a part-time job.</p>
+          <p class="sentence">However, fortunately, I passed the test and I was choosen as a exchange student to Goethe University, which
+            is located in Frankfurt, Germany.</p>
+          <p>From September 2019, I stayed in the domitory and I started new life in Germany.</p>
+          <p>There were so many difficulties such as culture-shock and the language-barrier, but I gradually got
+            accustomed to the life in Germany.</p>
+          <p>When the time to go back to Japan came in March 2020, I really missed the life in Germany.</p>
+          <p>Then the Covid-era came.</p>
+          <p>I did not know what to do and in which industry I should work, so I decided to do anything I want.</p>
+          <p>I played the guiter, I started learning Chinese, and the last thing I started was programming.</p>
+          <p></p>
+        </div>
+
+
+        <div><a href="./practicefortest.html">Go Back</a></div>
 
   </main>
 
 
 
+  <!-- jquery & iScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.drawer').drawer();
+    });
+  </script>
 </body>
 
 </html>

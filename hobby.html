@@ -8,6 +8,8 @@
   <!-- ここでのcontent内容が、Googleの検索結果に出力されることになるから気をつけること -->
   <meta name="description" content="Ryoの自己紹介サイトになっています。">
   <title>My Profile -Ryo-</title>
+  <!-- drawerの導入 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
   <!-- <style></style>このように直接CSSを記述することもできる -->
   <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
@@ -19,27 +21,41 @@
 </head>
 
 
-<body>
+<body class="drawer drawer--right">
 
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-1 image1">
-          <!-- srcの場合は、相対パスもしくは絶対パスで画像を引用する
+  <header role="banner">
+    <div class="image1"></div>
+    <!-- srcの場合は、相対パスもしくは絶対パスで画像を引用する
           →相対パスの場合、このファイルが存在しているところを基点として、./は同一階層、../は一つ上の階層を示す -->
-          <img src="./images/HTML5 Logo.jpeg" style="width: 50px; background-color: silver;" alt="HTML5ロゴ">
-        </div>
-        <a class="col-md-3" href="./history.html">Explore My History</a>
-        <a class="col-md-3" href="./hobby.html">My Hobby</a>
-        <a class="col-md-3" href="./learning.html">My learning</a>
-        <a class="col-md-2">Notes</a>
-      </div>
+    <img src="./images/HTML5 Logo.jpeg" style="width: 50px; background-color: silver;" alt="HTML5ロゴ">
     </div>
+
+    <h3 class="homepage-name">My Homepage</h3>
+
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <!-- ここでアイコンを表示している -->
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+      <ul class="drawer-menu">
+        <li><a class="drawer-brand" href="./practicefortest.html">Ryo's homepage</a></li>
+        <li><a class="drawer-menu-item" href="./history.html">Explore My History</a></li>
+        <li><a class="drawer-menu-item" href="./hobby.html">My Hobby</a></li>
+        <li><a class="drawer-menu-item" href="./learning.html">My learning</a></li>
+        <li><a class="drawer-menu-item" href=#>Notes</a></li>
+      </ul>
+    </nav>
   </header>
 
+
+
   <main>
+    <div id="full-screen-image" class=""></div>
+
     <div class="container">
       <div class="row">
+
         <div class="col-md-10">
 
           <h2>My Hobby</h2>
@@ -71,17 +87,94 @@
             <li>Vaccican</li>
             <li>Slovenia</li>
             <li>Switzerland</li>
-            <li></li>
+            <li>Poland</li>
             <li>India</li>
-
-
           </ul>
+
         </div>
+
+        <div class="col-md-4">
+          <div class="hobby-box">
+            <img class="hobby-image" src="images/HTML5 Logo.jpeg">
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="hobby-box">
+            <img class="hobby-image" src=# alt=#>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="hobby-box">
+            <img class="hobby-image" src="#" alt=#>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="hobby-box">
+            <img class="hobby-image" src="#" alt=#>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="hobby-box">
+            <img class="hobby-image" src="#" alt=#>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="hobby-box">
+            <img class="hobby-image" src="#" alt=#>
+          </div>
+        </div>
+
+        <div><a href="./practicefortest.html">Go Back</a></div>
+
       </div>
     </div>
+
   </main>
 
 
+
+  <!-- jquery & iScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.drawer').drawer();
+    });
+
+    // imageをクリックした際に全画面表示にさせたい
+    $('img').click(function () {
+      // attr メソッド とは、HTML 要素の様々な属性の値を取得や変更ができるメソッド
+      // var url = $(this).attr('src');
+      // jQueryの構文で書いているが、特殊だと感じているのは、記述しているようにメソッド名urlとその引数（）の部分を同じ文字として全て記述できること
+
+      // ここのurl、style.cssとの連携を取れなくて２時間くらい考えていた
+      // →まずconsoleに出力させてみたら、url自体はとってきていたが、それがうまく作動していなかった
+      // →さらにみてみると、style.cssから見た画像の場所ではなく、実際に呼び出しているhobby.htmlから見た場所を参照していた
+      // →最後に、style.css20歳にurlの中身を書いてみたら、urlメソッドの引数は"”で囲むことが必要だった
+      // →"だけではjQueryでは区切り文字として認識されてしまうので、エスケープシークエンスを使用して\"を追記し、うまく行った
+      var url = "url" + "(\"" + $(this).attr('src') + "\")";
+      $('#full-screen-image').addClass('isFullScreen');
+      $('#full-screen-image').css('background-image', url);
+      console.log(url);
+      console.log("image clicked");
+    });
+    $('#full-screen-image').click(function () {
+      $(this).removeClass('isFullScreen');
+    });
+  </script>
 </body>
 
 
