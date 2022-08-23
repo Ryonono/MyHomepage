@@ -49,7 +49,7 @@
 
   <main>
 
-    <div class="img-practice"><img src=#></div>
+    <div class="img-practice">In this page, I want to add new skills that I learned.</div>
 
 
 
@@ -58,21 +58,24 @@
     例えばfrom0だと、要素が見えた瞬間に動き出す -->
     <!-- translateはx,y,z軸に何pxだけ動くかを示したもの,rotateは回転を何度入れるのかということを示す -->
     <!-- data-rotatez="90" -->
+    <p>This is scrollme plug in of jQuery. With this plug in ,we can make the move of boxes more smoothly.
+    </p>
     <div class="scrollme">
-      <div class="animateme" data-when="enter" data-from="0.3" data-to="0.8" data-opacity="0.5" data-translatex="600"
-        data-rotatez="90">
-        Yup, that's all.
+      <div class="animateme" data-when="enter" data-from="0.3" data-to="0.8" data-opacity="0.7" data-translatex="600"
+        data-translatey="200">
       </div>
     </div>
 
+    <p>With it, we can make images move gradually.</p>
     <div class="scrollme">
       <img class="animateme" data-when="enter" data-from="0.5" data-to="0.9" data-opacity="1" data-translatex="600"
         src="images/My portrait in India.jpeg">
     </div>
 
+    <p>Image can be easily upside-down.</p>
     <div class="scrollme">
-      <img class="animateme" data-when="enter" data-from="0.2" data-to="0.8" data-opacity="0.7" data-translatex="700"
-        data-translatey="-200">
+      <img class="animateme" data-when="enter" data-from="0.2" data-to="0.8" data-opacity="0.8" data-translatex="700"
+        data-translatey="-200" data-rotatex="180">
     </div>
 
 
