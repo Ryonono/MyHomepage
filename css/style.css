@@ -149,13 +149,11 @@ cssファイルはそのまま、hobby.htmlのjQueryの記述に\"を追記す�
 }
 
 
-
 /* Learning */
 
 .img-practice {
   width: 100%;
-  height: 300px;
-  background-color: gray;
+  height: 250px;
 }
 
 .scrollme {
@@ -172,23 +170,58 @@ cssファイルはそのまま、hobby.htmlのjQueryの記述に\"を追記す�
 
 .fadeIn {
   opacity: 0;
-  transition: 5s;
+  transition: 4s;
 }
 .fadeIn.is-show {
   opacity: 1;
 }
 
 .moving-up {
-  width: 80%;
+  width: 100%;
   height: 400px;
+
 }
 
-.moving-up2 {
+/* .moving-up2 {
   width : 100%;
   height: 100%;
   background-image: url("images/HTML5 Logo.jpeg");
+} */
+
+
+.myBoxA {
+  width: 170px;
+  margin: 0 auto;
+  padding: 10px 0;
+  background-color: #d73f22;
+  color: rgb(236, 228, 228);
+  position: relative;
+  transform: rotateX(-90deg);
+  transform-style: preserve-3d;
 }
 
+.myBoxB {
+  width: 170px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center top;
+  transform: rotateX(-90deg);
+}
+
+.myBoxB span {
+  display: block;
+  padding: 10px 0;
+  border: 1px solid #d73f22;
+  background-color: #fff;
+  color: #d73f22;
+  transform: rotateX(-180deg);
+}
+
+.perspective {
+  perspective: 600px;
+  z-index: 100;
+}
 
 
 

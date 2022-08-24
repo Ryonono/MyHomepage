@@ -51,9 +51,17 @@
 
     <div class="img-practice">In this page, I want to add new skills that I learned.</div>
 
+
+
     <div>This is skrollr plug in. We can use it with making images move up and down.</div>
     <div data-0="background-color:rgb(0,0,255); transform:rotate(0deg);"
-      data-300="background-color:rgb(255,0,0); transform:rotate(360deg);">WOOOT</div>
+      data-300="background-color:rgb(255,0,0); transform:rotate(360deg);">Color changed!</div>
+
+
+    <div>This is inview function. when you scroll the page, the image shows up gradually.</div>
+    <div class="imgBox inview fadeIn">
+      <img src="images/B033E25B-1911-48FB-BE08-E55EF5AA679C_1_105_c.jpeg" alt="">
+    </div>
 
 
     <!-- scrollmeはJqueryのプラグインで、ダウンロードしたら使用できる
@@ -82,20 +90,26 @@
         data-translatey="-200" data-rotatex="180">
     </div>
 
+    <div>Moving Up...</div>
+    <div class="moving-up" data-bottom-top="background-color:rgb(234,237,86);"
+      data--100p-bottom="background-color:rgb(142, 44, 199);">
+    </div>
+    <!-- <div class="moving-up2" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"
+      class="skrollable skrollable-between" style="background-color: blue;"></div> -->
 
-    <div>This is inview function. when you scroll the page, the image shows up gradually.</div>
-    <div class="imgBox inview fadeIn">
-      <img src="images/B033E25B-1911-48FB-BE08-E55EF5AA679C_1_105_c.jpeg" alt="">
+
+    <div>This seems like box is rotating as we scroll down.</div>
+    <div class="perspective">
+      <div class="myBoxA" data--20p-bottom="transform: rotateX(-90deg)" data--60p-bottom="transform: rotateX(0deg)">
+        <div class="myBoxB">
+          <span>Side A</span>
+        </div>
+        Side B
+      </div>
     </div>
 
-    <!-- 下から上に動かしたいがやり方がわからない -->
-    <div data-1500="background-color:rgb(234,237,86); top: 20%;" data-1000="top: 50%;" data-500="top: 80%"
-      class="moving-up">
-    </div>
-    <div class="moving-up2" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"
-      class="skrollable skrollable-between" style="background-color: blue;"></div>
 
-
+    <div><a href="./practicefortest.html">Go Back</a></div>
   </main>
 
 
@@ -130,11 +144,6 @@
     });
   </script>
 </body>
-
-
-<div><a href="./practicefortest.html">Go Back</a></div>
-
-
 
 
 </html>
