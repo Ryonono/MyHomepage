@@ -49,81 +49,7 @@
 
   <main>
 
-    <div class="img-practice">In this page, I want to add new skills that I learned.</div>
-
-
-
-    <div class="explain">This is skrollr plug in. We can use it with making images move up and down.</div>
-    <div data-0="background-color:rgb(0,0,255); transform:rotate(0deg);"
-      data-300="background-color:rgb(255,0,0); transform:rotate(360deg);">Color changed!</div>
-
-
-    <div class="explain">This is inview function. when you scroll the page, the image shows up gradually.</div>
-    <div class="imgBox inview fadeIn">
-      <img src="images/B033E25B-1911-48FB-BE08-E55EF5AA679C_1_105_c.jpeg" alt="">
-    </div>
-
-
-    <!-- scrollmeはJqueryのプラグインで、ダウンロードしたら使用できる
-    data-from, data-toは動きがスタートする位置と終わる位置を指定する（0-1)
-    例えばfrom0だと、要素が見えた瞬間に動き出す -->
-    <!-- translateはx,y,z軸に何pxだけ動くかを示したもの,rotateは回転を何度入れるのかということを示す -->
-    <!-- data-rotatez="90" -->
-
-    <div class="scrollme">
-      <p class="explain">This is scrollme plug in of jQuery. With this plug in ,we can make the move of boxes more
-        smoothly.
-      </p>
-      <div class="animateme" data-when="enter" data-from="0.3" data-to="0.8" data-opacity="0.7" data-translatex="600"
-        data-translatey="200">
-      </div>
-    </div>
-
-    <div class="scrollme">
-      <p class="explain">With it, we can make images move gradually.</p>
-      <img class="animateme" data-when="enter" data-from="0.5" data-to="0.9" data-opacity="1" data-translatex="600"
-        src="images/My portrait in India.jpeg">
-    </div>
-
-    <div class="scrollme">
-      <p class="explain">Image can be easily upside-down.</p>
-      <img class="animateme" data-when="enter" data-from="0.2" data-to="0.8" data-opacity="0.8" data-translatex="700"
-        data-translatey="200" data-rotatex="180">
-    </div>
-
-    <!-- Skrollrでは実装が難しかったので、scrollmeで実装した -->
-    <div class="explain">Moving Up...</div>
-    <div class="scrollme">
-      <img class="animateme moving-up" data-when="exit" data-from="0.2" data-to="0.9" data-opacity="1"
-        data-translatey="-2000" src="images/My portrait in India.jpeg">
-    </div>
-    <!-- <div class="moving-up" data-bottom-top="background-color:rgb(234,237,86);"
-      data--100p-bottom="background-color:rgb(142, 44, 199);">
-    </div> -->
-    <!-- <div class="moving-up2" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"
-      class="skrollable skrollable-between" style="background-color: blue;"></div> -->
-
-
-    <div class="explain">This seems like box is rotating as we scroll down.</div>
-    <div class="perspective">
-      <div class="myBoxA" data--20p-bottom="transform: rotateX(-90deg)" data--60p-bottom="transform: rotateX(0deg)">
-        <div class="myBoxB">
-          <span>Side A</span>
-        </div>
-        Side B
-      </div>
-    </div>
-
-    <div class="#">
-      <div></div>
-    </div>
-
-    <div><a href="./practicefortest.html">Go Back</a></div>
   </main>
-
-
-
-
 
 
 
@@ -135,7 +61,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
   <!-- scrollme.js -->
   <script src="js/scrollme-master/jquery.scrollme.js"></script>
-  <!-- <script type="text/javascript" src="js/jquery.inview.min.js"></script> -->
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
   <script type="text/javascript" src="js/skrollr.js"></script>
@@ -144,15 +69,7 @@
     $(document).ready(function () {
       $('.drawer').drawer();
     });
-    $(function () {
-      $(".inview").on("inview", function (event, isInView) {
-        if (isInView) {
-          $(this).stop().addClass("is-show");
-        }
-      });
-    });
   </script>
 </body>
-
 
 </html>
