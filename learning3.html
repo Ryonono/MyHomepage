@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
   <!-- <style></style>このように直接CSSを記述することもできる -->
   <link rel="stylesheet" href="./css/bootstrap.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/learning3.css">
   <!-- 必ず、Jqueryを読み込んでからbootstrapを読み込む（今回フォルダの中に入れているが、オンラインで呼び出す方法もある） -->
   <script type="text/javascript" src="./js/jquery-3.6.0.js"></script>
   <script type="text/javascript" src="./js/bootstrap.js"></script>
@@ -49,20 +49,56 @@
 
   <main>
 
-    <section>
-      <div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"
-        data-anchor-target="#slide-1">
-        <div class="hsContainer">
-          <div class="hsContent" data-center="opacity: 1;" data-106-top="opacity 0;" data-anchor-target="#slide-1 h2">
-            <h2>Fade out elements</h2>
-          </div>
-        </div>
+    <section class="section-learning3">
+      <div class="fade-left">Fade in from left side</div>
+
+      <div class="fade-up">Fade in from lower side</div>
+
+      <div class="fade-right">Fade in from right side</div>
+
+      <div class="fade-down">Fade in from upper side</div>
+
+
+      <div class="flip">
+        <div class="flip-down">Flipping down</div>
       </div>
+
     </section>
 
+
+    <!-- <div id="luxy">
+
+      parallaxがどうしても効かない
+      <section class="area">
+        <figure class="luxy-el" data-speed-y="9" data-offset="50">
+          <img src="images/There are so many fish in the sea.jpeg" alt="So many fish">
+        </figure>
+        <figure class="box luxy-el" data-horizontal="1" data-speed-x="-4" style="z-index: 10; opacity: 0.3">
+          <img src="./images/magnificent view of mountains.jpeg">
+        </figure>
+        <div class="luxy-el" data-speed-y="140" data-offset="30" style="z-index: 30;">
+          This is how parallax is equiped.
+        </div>
+      </section>
+
+    </div> -->
+
+
+    <section class="fixed">
+      <img src="images/There are so many fish in the sea.jpeg" alt="So many fish">
+    </section>
+
+    <section class="fixed">
+      <img src="./images/magnificent view of mountains.jpeg" alt="magnificent view of mountains">
+    </section>
+
+    <section class="fixed">
+      <img src="images/changing color leaves.jpeg" alt="changing color of leaves">
+    </section>
+
+
+
   </main>
-
-
 
   <!-- jquery & iScroll -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -70,16 +106,17 @@
   <!-- drawer.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
-  <!-- scrollme.js -->
-  <script src="js/scrollme-master/jquery.scrollme.js"></script>
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
-  <script type="text/javascript" src="js/skrollr.js"></script>
+  <sctipt type="text/javascript" src="js/luxy.min.js" charset="utf-8"></sctipt>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js"></script>
   <script>
-    var s = skrollr.init();
     $(document).ready(function () {
       $('.drawer').drawer();
     });
+  </script>
+  <script charset="utf-8">
+    window.onload = function () {
+      luxy.init();
+    }
   </script>
 </body>
 

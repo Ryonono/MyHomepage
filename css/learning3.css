@@ -1,0 +1,160 @@
+/* learning３ */
+
+header {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  z-index: 150;
+  width: 100%;
+}
+
+.section-learning3 {
+  position: relative;
+}
+
+
+.fade-left {
+  width: 400px;
+  height: 300px;
+  background-color: aqua;
+  font-size: 200%;
+  margin: 0 auto;
+  animation-name: fadeLeftAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    transform: translatex(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(100px);
+  }
+}
+
+.fade-up {
+  width: 400px;
+  height: 300px;
+  background-color: rgb(237, 240, 78);
+  font-size: 200%;
+  margin: 0 auto;
+  z-index: 10;
+  animation-name: fadeUpAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translatey(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(-200px);
+  }
+}
+
+.fade-right {
+  width: 400px;
+  height: 300px;
+  background-color: lightgreen;
+  font-size: 200%;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  z-index: -10;
+  animation-name: fadeRightAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    transform: translatex(800px);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(200px);
+  }
+}
+
+.fade-down {
+  width: 400px;
+  height: 300px;
+  background-color: lightcoral;
+  font-size: 200%;
+  position: absolute;
+  top: 200px;
+  right: 0%;
+  animation-name: fadeDownAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translatey(-800px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(-300px);
+  }
+}
+
+.flip {
+  transform: translate3d(0,0,0);
+}
+
+.flip-down {
+  width: 400px;
+  height: 300px;
+  background-color: darksalmon;
+  font-size: 200%;
+  animation-name: flipDown;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  margin-top: 100px;
+}
+
+@keyframes flipDown {
+  from {
+    transform: perspective(1000px) rotatex(110deg);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(1000px) rotatex(0);
+    opacity: 1;
+  }
+}
+
+section.fixed {
+  position: -webkit-sticky;
+  position: sticky;
+  /* sticky.jsをインポートし、position: sticky, topにピクセル数を入れると、
+  その分だけ画像同士がくっつきあい、紙芝居のようなエフェクトをつけることができる */
+  top: 70px;
+}
+
+section img {
+  width: 100%;
+  height: 1000px;
+}
+
+/* ラストの要素がheaderとくっついてしまう */
+section.fixed:last-of-type {
+padding-top: 70px;
+}
+/* section.fixed:nth-child(odd) {
+  background-color: khaki;
+}
+
+section.fixed:nth-child(even) {
+  background-color: deepskyblue;
+} */
