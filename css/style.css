@@ -273,10 +273,20 @@ cssファイルはそのまま、hobby.htmlのjQueryの記述に\"を追記す�
   width: 100%;
   height: 100%;
   z-index: 10;
+  position: relative;
 }
 
 .luxy-el img:first {
   margin-top: 150px;
+}
+
+.luxy-movex {
+  position: absolute;
+  top: 500px;
+  right: 30%;
+  font-size: 200%;
+  z-index: 100;
+  color: black;
 }
 
 .luxy-string {
