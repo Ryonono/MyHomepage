@@ -50,13 +50,33 @@
   <main>
 
     <section>
-      <div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"
+      <!-- <div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;"
         data-anchor-target="#slide-1">
         <div class="hsContainer">
           <div class="hsContent" data-center="opacity: 1;" data-106-top="opacity 0;" data-anchor-target="#slide-1 h2">
             <h2>Fade out elements</h2>
           </div>
         </div>
+      </div> -->
+
+      <div id="luxy">
+        <!-- data-offsetはデータの初期位置を定めるプロパティで、50だと上から50pxmarginができたような形になる、？ -->
+        <!-- data-speed-yはスクロールをし始めたと同時に縦方向に動くスピードを表している（おそらくーのほうが早く動く)
+        →下の方の要素になると、スピードによってだいぶ差がついてしまったり、重なってしまったりするので、このスピード差は気にしないといけない -->
+        <div class="luxy-el" data-speed-y="6" data-offset="50">
+          <img src="images/magnificent view of mountains.jpeg">
+        </div>
+        <div class="luxy-el" data-speed-y="-3" data-offset="150">
+          <img src="images/changing color leaves.jpeg">
+        </div>
+        <div class="luxy-el luxy-string" data-speed-y="-10" data-offset="-500">This is luxy scroll pattern.</div>
+        <div class="luxy-el" data-speed-y="-5" data-offset="100">
+          <img src="images/There are so many fish in the sea.jpeg">
+        </div>
+        <div class="luxy-el" data-speed-y="2" data-offset="-500">
+          <img src="images/colorful balls in the museum.jpeg">
+        </div>
+
       </div>
     </section>
 
@@ -75,11 +95,13 @@
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
   <script type="text/javascript" src="js/skrollr.js"></script>
+  <script src="js/luxy.min.js"></script>
   <script>
     var s = skrollr.init();
     $(document).ready(function () {
       $('.drawer').drawer();
     });
+    luxy.init();
   </script>
 </body>
 

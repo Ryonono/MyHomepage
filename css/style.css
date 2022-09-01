@@ -3,7 +3,7 @@
 直接HTMLにstyle属性を記述してしまうと、レスポンシブ対応などをさせるときにcssで上書きができなくなってしまう、→避ける */
 
 header {
-  padding-bottom: 20px;
+  margin-bottom: 50px;
   border-bottom: 1px solid black;
 }
 
@@ -238,7 +238,7 @@ cssファイルはそのまま、hobby.htmlのjQueryの記述に\"を追記す�
 
 
 /* Learning2 */
-.hsContainer {
+/* .hsContainer {
   display: table;
   table-layout: fixed;
   width: 100%;
@@ -265,8 +265,25 @@ cssファイルはそのまま、hobby.htmlのjQueryの記述に\"を追記す�
   width: 100%;
 }
 /* Slide 1 */
-#slide-1 .bcg {
+/* #slide-1 .bcg {
   background-image:url('./images/changing color leaves.jpeg');
+} */ 
+
+.luxy-el img{
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.luxy-el img:first {
+  margin-top: 150px;
+}
+
+.luxy-string {
+  font-size: 200%;
+  color: white;
+  margin: 0 auto;
+  z-index: 50;
 }
 
 
