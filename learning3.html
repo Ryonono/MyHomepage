@@ -59,6 +59,11 @@
       <div class="fade-down delay-time3">Fade in from upper side</div>
 
 
+      <div class="door-fuction">
+        <img class="door-image" src="images/door.png" alt="door">
+        <img class="ghost" src="images/ghost.jpeg" alt="ghost">
+      </div>
+
       <div class="flip">
         <div class="flip-down">Flipping down</div>
       </div>
@@ -139,6 +144,13 @@
     window.onload = function () {
       luxy.init();
     }
+    $(".door-image").on('click', function () {
+      $(".door-image").fadeOut(1500);
+      // removeClassはなくても良い
+      // いろいろ試行錯誤したが、結局addClass,removeClassの際には('')内部に記述するクラス名には.をつけないことが必須だった
+      // →つけずにクラス指定したらうまくいった
+      $(".ghost").addClass('ghost-image').removeClass('ghost');
+    });
   </script>
 </body>
 
